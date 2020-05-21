@@ -60,10 +60,10 @@ const questions = [
 ];
 
 function writeToFile(fileName, data) {
-    fs.writeFileSync(path.join(process.cwd(), fileName), data);
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
-async function init() {
+function init() {
     inquire.prompt(questions).then((inquireResponse) => {
         writeToFile("README.md", generateMarkdown({ ...inquireResponse }));
     });

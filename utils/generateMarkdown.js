@@ -1,3 +1,27 @@
+function newProject(username, title) {
+  const projectTitle = title.split(" ").join("-");
+  return `https://github.com/${username}/${projectTitle}`;
+}
+
+function licenseBadge(license, username, title) {
+  if (license !== "None") {
+    return `[![License](https://img.shields.io/badge/license-${license}-blue.svg)](${newProject(username, title)})`;
+  } else {
+    return '';
+  }
+}
+
+function licenseSection(license) {
+  if (license !== "None") {
+    return (
+      `## License
+
+This project is licensed under the ${license} license.`
+    )
+  }
+  return ''
+}
+
 function generateMarkdown(data) {
   return `
 # ${data.title}
@@ -38,10 +62,7 @@ ${data.installation}
 
 ${data.usage}
 
-
-## License
-
-${data.license}
+${licenseSection(data.license)}
 
 
 ## Contributing
@@ -62,19 +83,6 @@ For any questions or queries, contact: ${data.username}
 Or send an email to ${data.email}
 
 `;
-}
-
-function newProject(username, title) {
-  const projectTitle = title.split(" ").join("-");
-  return `https://github.com/${username}/${projectTitle}`;
-}
-
-function licenseBadge(license, username, title) {
-  if (license !== "None") {
-    return `[![License](https://img.shields.io/badge/license-${license}-blue.svg)](${newProject(username, title)})`;
-  } else {
-    return '';
-  }
 }
 
 module.exports = generateMarkdown;

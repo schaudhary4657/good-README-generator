@@ -1,7 +1,7 @@
 
-# README Generator
+# Good README Generator
 
-[![License](https://img.shields.io/badge/license-ISC-blue.svg)](https://github.com/testname/README-Generator)
+[![License](https://img.shields.io/badge/license--blue.svg)](https://github.com/testname/Good-README-Generator)
 
 
 ## Description
@@ -37,10 +37,9 @@ npm i
 
 Follow examples
 
-
 ## License
 
-ISC
+This project is licensed under the  license.
 
 
 ## Contributing
