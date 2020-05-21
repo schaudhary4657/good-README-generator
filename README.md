@@ -59,3 +59,8 @@ npm test
 For any questions or queries, contact: testname
 Or send an email to test@testmail.com
 
+
+## Demo
+
+![demo](https://user-images.githubusercontent.com/51222558/81357234-ef6b6900-9087-11ea-8c5b-d1c3654b95a6.gif)
+
